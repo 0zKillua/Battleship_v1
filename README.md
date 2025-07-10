@@ -1,3 +1,5 @@
+![Background](images/bg.jpg)
+
 # OnChain Battleship - Complete MVP
 
 A fully functional Battleship game implementation using Merkle proofs for verification without zero-knowledge proofs.

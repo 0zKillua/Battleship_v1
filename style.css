@@ -3,11 +3,11 @@
   /* Colors */
   --color-background: rgba(252, 252, 249, 1);
   --color-surface: rgba(255, 255, 253, 1);
-  --color-text: rgba(19, 52, 59, 1);
+  --color-text: rgb(2, 12, 14);
   --color-text-secondary: rgba(98, 108, 113, 1);
-  --color-primary: rgba(33, 128, 141, 1);
-  --color-primary-hover: rgba(29, 116, 128, 1);
-  --color-primary-active: rgba(26, 104, 115, 1);
+  --color-primary: rgb(1, 15, 17);
+  --color-primary-hover: rgb(6, 6, 6);
+  --color-primary-active: rgb(11, 11, 11);
   --color-secondary: rgba(94, 82, 64, 0.12);
   --color-secondary-hover: rgba(94, 82, 64, 0.2);
   --color-secondary-active: rgba(94, 82, 64, 0.25);
@@ -106,19 +106,19 @@
   :root {
     --color-background: rgba(31, 33, 33, 1);
     --color-surface: rgba(38, 40, 40, 1);
-    --color-text: rgba(245, 245, 245, 1);
-    --color-text-secondary: rgba(167, 169, 169, 0.7);
-    --color-primary: rgba(50, 184, 198, 1);
-    --color-primary-hover: rgba(45, 166, 178, 1);
-    --color-primary-active: rgba(41, 150, 161, 1);
-    --color-secondary: rgba(119, 124, 124, 0.15);
+    --color-text: rgb(8, 1, 1);
+    --color-text-secondary: rgba(1, 14, 14, 0.7);
+    --color-primary: rgb(226, 236, 226);
+    --color-primary-hover: rgb(74, 195, 110);
+    --color-primary-active: rgb(0, 7, 7);
+    --color-secondary: rgba(0, 9, 9, 0.15);
     --color-secondary-hover: rgba(119, 124, 124, 0.25);
-    --color-secondary-active: rgba(119, 124, 124, 0.3);
+    --color-secondary-active: rgba(1, 9, 9, 0.3);
     --color-border: rgba(119, 124, 124, 0.3);
     --color-error: rgba(255, 84, 89, 1);
     --color-success: rgba(50, 184, 198, 1);
     --color-warning: rgba(230, 129, 97, 1);
-    --color-info: rgba(167, 169, 169, 1);
+    --color-info: rgb(9, 9, 9);
     --color-focus-ring: rgba(50, 184, 198, 0.4);
     --color-btn-primary-text: rgba(19, 52, 59, 1);
     --color-card-border: rgba(119, 124, 124, 0.2);
@@ -189,11 +189,11 @@
 [data-color-scheme="light"] {
   --color-background: rgba(252, 252, 249, 1);
   --color-surface: rgba(255, 255, 253, 1);
-  --color-text: rgba(19, 52, 59, 1);
+  --color-text: rgb(1, 14, 17);
   --color-text-secondary: rgba(98, 108, 113, 1);
-  --color-primary: rgba(33, 128, 141, 1);
+  --color-primary: rgb(2, 13, 15);
   --color-primary-hover: rgba(29, 116, 128, 1);
-  --color-primary-active: rgba(26, 104, 115, 1);
+  --color-primary-active: rgb(1, 17, 19);
   --color-secondary: rgba(94, 82, 64, 0.12);
   --color-secondary-hover: rgba(94, 82, 64, 0.2);
   --color-secondary-active: rgba(94, 82, 64, 0.25);
@@ -202,7 +202,7 @@
   --color-card-border: rgba(94, 82, 64, 0.12);
   --color-card-border-inner: rgba(94, 82, 64, 0.12);
   --color-error: rgba(192, 21, 47, 1);
-  --color-success: rgba(33, 128, 141, 1);
+  --color-success: rgb(1, 10, 11);
   --color-warning: rgba(168, 75, 47, 1);
   --color-info: rgba(98, 108, 113, 1);
   --color-focus-ring: rgba(33, 128, 141, 0.4);
@@ -382,8 +382,9 @@ pre code {
 }
 
 .btn:disabled {
-  opacity: 0.5;
+  opacity: 0.7;
   cursor: not-allowed;
+  color: #000;
 }
 
 /* Form elements */
@@ -686,13 +687,22 @@ body {
 
 /* Welcome Screen */
 .ocean-bg {
-  background: linear-gradient(180deg, #1e40af 0%, #1e3a8a 50%, #1e2563 100%);
-  min-height: 100vh;
+  background: url('images/bg.jpg') no-repeat center center/cover;
   position: relative;
-  overflow: hidden;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+}
+.ocean-bg .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 50, 0.5); /* dark blue overlay */
+  z-index: 1;
 }
 
 .waves {
@@ -717,6 +727,10 @@ body {
   text-align: center;
   z-index: 10;
   color: white;
+  position: relative;
+  
+    color: white;
+    padding: 2rem;
 }
 
 .game-title {
@@ -732,10 +746,16 @@ body {
   margin-bottom: var(--space-32);
   opacity: 0.9;
   font-weight: var(--font-weight-medium);
+  text-shadow: 1px 1px 6px #000;
+
 }
 
 .welcome-actions {
   margin-top: var(--space-32);
+  display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
 }
 
 /* Game Container */
