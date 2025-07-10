@@ -14,14 +14,6 @@ Click on each file name below to download:
 - **Deployment Script**: `deploy.js`
 - **Environment Template**: `.env.example`
 
-### Method 2: Frontend Demo
-
-**Live Demo**: https://ppl-ai-code-interpreter-files.s3.amazonaws.com/web/direct-files/1d0c81e681320f97067c1977c7cb7dbe/5ecf482f-d7df-4c02-9f13-758c48dd4688/index.html
-
-To download the frontend:
-1. Open the demo link
-2. Right-click → "Save Page As..." → Save as `index.html`
-3. All CSS and JavaScript is included in the single file
 
 ## 🚀 Smart Contract Setup
 
