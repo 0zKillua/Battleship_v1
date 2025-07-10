@@ -1,0 +1,25 @@
+{
+  "name": "onchain-battleship",
+  "version": "1.0.0",
+  "description": "OnChain Battleship game using Merkle proofs",
+  "main": "index.js",
+  "scripts": {
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy:sepolia": "npx hardhat run scripts/deploy.js --network sepolia",
+    "deploy:goerli": "npx hardhat run scripts/deploy.js --network goerli",
+    "deploy:mainnet": "npx hardhat run scripts/deploy.js --network mainnet",
+    "verify": "npx hardhat verify --network sepolia",
+    "node": "npx hardhat node"
+  },
+  "keywords": ["blockchain", "battleship", "merkle", "game"],
+  "author": "Your Name",
+  "license": "MIT",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0",
+    "hardhat": "^2.17.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.9.3"
+  }
+}
